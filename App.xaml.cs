@@ -51,8 +51,8 @@ namespace ScullFurnaces_32
 
 
             scull_Furnaces_Main_Window.maxValueForCurrentOnYAxis.Text = mySettings.UpperLimitForCurrent;
-            //scull_Furnaces_Main_Window.maxValueForCurrentOnYAxis.DataContext = mySettings;
             scull_Furnaces_Main_Window.maxValueForVoltageOnYAxis.Text = mySettings.UpperLimitForVoltage;
+            scull_Furnaces_Main_Window.maxValueForVacuumOnYAxis.Text = mySettings.UpperLimitForVacuum;
 
             scull_Furnaces_Main_Window.begTimeOnXAxis.clockWatch.Alarm_On = false; //не обнавлять график при начальной установке диапазона времени для отображения 
             scull_Furnaces_Main_Window.endTimeOnXAxis.clockWatch.Alarm_On = false; //не обнавлять график при начальной установке диапазона времени для отображения 
@@ -230,6 +230,21 @@ namespace ScullFurnaces_32
                 //			this.Save();
             }
         }
+        [UserScopedSetting()]
+        [DefaultSettingValue("100")]
+        public string UpperLimitForVacuum
+        {
+            get
+            {
+                return ((string)this["UpperLimitForVacuum"]);
+            }
+            set
+            {
+                this["UpperLimitForVacuum"] = (string)value;
+                //			this.Save();
+            }
+        }
+
         [UserScopedSetting()]
         [DefaultSettingValue("86399")]
         public int TimeUpperBoundaryForTheVoltage

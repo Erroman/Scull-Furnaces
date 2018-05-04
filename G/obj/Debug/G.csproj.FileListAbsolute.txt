@@ -3,3 +3,4 @@ C:\Endeavours\Scull-furnaces-32\G\obj\Debug\G.pdb
 C:\Endeavours\Scull-furnaces-32\G.exe.config
 C:\Endeavours\Scull-furnaces-32\G.exe
 C:\Endeavours\Scull-furnaces-32\G.pdb
+C:\Endeavours\scull-furnaces-32\G\obj\Debug\G.csprojResolveAssemblyReference.cache

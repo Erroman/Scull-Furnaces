@@ -119,6 +119,22 @@ namespace ScullFurnaces_32
 
             }
         }
+        private void setMaxYValueForGraphOfVacuum(object sender, EventArgs e)
+        {
+            if (e is KeyEventArgs && (e as KeyEventArgs).Key != Key.Return) return;
+
+            WriteLine("tbWithMaxYValue = {0}", maxValueForVacuumOnYAxis);
+            if (app.mySettings.UpperLimitForVacuum != maxValueForVacuumOnYAxis.Text)
+            {
+                app.mySettings.UpperLimitForVacuum = maxValueForVacuumOnYAxis.Text;
+                app.mySettings.Save();
+                currentGraph.Children.Clear();
+                currentPlotting(ParameterName.Вакуум, vacuumGraph);
+
+
+            }
+        }
+
         public void setMinTimeValue(AlarmEventArgs aea)
         {
             currentGraph.Children.Clear();
@@ -141,6 +157,11 @@ namespace ScullFurnaces_32
         {
             voltageGraph.Children.Clear();
             voltagePlotting(ParameterName.Напряжение_дуги, voltageGraph, null, aea);
+
+        }
+
+        private void maxValueForVacuumOnYAxis_LostFocus(object sender, RoutedEventArgs e)
+        {
 
         }
     }
