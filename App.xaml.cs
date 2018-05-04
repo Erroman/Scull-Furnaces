@@ -50,9 +50,9 @@ namespace ScullFurnaces_32
                                                                       //распакованного массива
 
 
-            //scull_Furnaces_Main_Window.maxValueForCurrentOnYAxis.Text = mySettings.UpperLimitForCurrent;
-            scull_Furnaces_Main_Window.maxValueForCurrentOnYAxis.DataContext = mySettings;
-            scull_Furnaces_Main_Window.maxValueForVoltageOnYAxis.DataContext = mySettings;
+            scull_Furnaces_Main_Window.maxValueForCurrentOnYAxis.Text = mySettings.UpperLimitForCurrent;
+            //scull_Furnaces_Main_Window.maxValueForCurrentOnYAxis.DataContext = mySettings;
+            scull_Furnaces_Main_Window.maxValueForVoltageOnYAxis.Text = mySettings.UpperLimitForVoltage;
 
             scull_Furnaces_Main_Window.begTimeOnXAxis.clockWatch.Alarm_On = false; //не обнавлять график при начальной установке диапазона времени для отображения 
             scull_Furnaces_Main_Window.endTimeOnXAxis.clockWatch.Alarm_On = false; //не обнавлять график при начальной установке диапазона времени для отображения 

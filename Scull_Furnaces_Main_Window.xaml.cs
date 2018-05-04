@@ -100,8 +100,8 @@ namespace ScullFurnaces_32
             {
                 app.mySettings.UpperLimitForVoltage= maxValueForVoltageOnYAxis.Text;
                 app.mySettings.Save();
-                //currentGraph.Children.Clear();
-                //currentPlotting(ParameterName.Ток_общ, currentGraph);
+                voltageGraph.Children.Clear();
+                voltagePlotting(ParameterName.Напряжение_дуги, voltageGraph);
             }
         }
         private void setMaxYValueForGraphOfCurrent(object sender, EventArgs e)

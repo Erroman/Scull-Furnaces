@@ -61,7 +61,7 @@
                         <ColumnDefinition Width ="57*"/>
                         <ColumnDefinition Width="1238*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBox x:Name="maxValueForVoltageOnYAxis" Text="{Binding UpperLimitForVoltage, Mode=TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,0,0,0" LostFocus="setMaxYValueForGraphOfVoltage" KeyDown="setMaxYValueForGraphOfVoltage" />
+                    <TextBox x:Name="maxValueForVoltageOnYAxis"  HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,0,0,0" LostFocus="setMaxYValueForGraphOfVoltage" KeyDown="setMaxYValueForGraphOfVoltage" />
                     <Canvas Grid.Row = "0" Grid.Column = "1" Name="voltageGraph" Background="White" Loaded = "voltageGraph_Loaded"
 						VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ColumnSpan="2" MouseDown="putTheTimeByMouse" MouseMove="putTheTimeByMouse"/>
                     <DockPanel Grid.Row="1" Grid.Column="1"  LastChildFill  ="False" Grid.ColumnSpan="2">
@@ -81,7 +81,7 @@
                         <ColumnDefinition Width ="57*"/>
                         <ColumnDefinition Width="1238*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBox x:Name="maxValueForCurrentOnYAxis" Text="{Binding UpperLimitForCurrent, Mode=TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,0,0,0" LostFocus="setMaxYValueForGraphOfCurrent" KeyDown="setMaxYValueForGraphOfCurrent" />
+                    <TextBox x:Name="maxValueForCurrentOnYAxis"  HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,0,0,0" LostFocus="setMaxYValueForGraphOfCurrent" KeyDown="setMaxYValueForGraphOfCurrent" />
                     <Canvas Grid.Row = "0" Grid.Column = "1" Name="currentGraph" Background="White" Loaded = "currentGraph_Loaded"
 						VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ColumnSpan="2" MouseDown="putTheTimeByMouse" MouseMove="putTheTimeByMouse"/>
                     <DockPanel Grid.Row="1" Grid.Column="1"  LastChildFill  ="False" Grid.ColumnSpan="2">
